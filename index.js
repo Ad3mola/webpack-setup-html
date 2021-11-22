@@ -65,7 +65,7 @@ function stringToChainType(s) {
 
 select.addEventListener("change", async (e) => {
   chainValue = stringToChainType(e.target.value);
-  suggestedParams = await apiGetTxnParams(chain);
+  suggestedParams = await apiGetTxnParams(chainValue);
 });
 
 form.addEventListener("submit", async () => {
